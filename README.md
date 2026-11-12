@@ -51,3 +51,44 @@ See [ROADMAP.md](ROADMAP.md) and GitHub issues once created. Meaningful, indepen
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+## USB Device Filtering
+
+Linux USB Test Lab supports filtering connected devices by USB Vendor ID (VID) and Product ID (PID).
+
+### Filter by Vendor ID
+
+```bash
+usb-lab scan --vendor 046d
+```
+
+### Filter by Product ID
+
+```bash
+usb-lab scan --product c548
+```
+
+### Combine Vendor and Product IDs
+
+```bash
+usb-lab scan --vendor 046d --product c548
+```
+
+### Input Validation
+
+- USB IDs must contain exactly four hexadecimal digits.
+- Filtering is case-insensitive.
+- Both filters must match when used together.
+- If no devices match, the CLI returns an empty JSON array (`[]`).
+
+Example:
+
+```bash
+usb-lab scan --vendor ffff
+```
+
+Expected output:
+
+```json
+[]
+```
