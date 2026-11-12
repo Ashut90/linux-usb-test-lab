@@ -1,0 +1,4 @@
+[
+  {"path": "1-1", "vendor_id": "1234", "product_id": "abcd", "device_class": "00", "speed_mbps": "480"},
+  {"path": "2-1", "vendor_id": "5678", "product_id": "ef01", "device_class": "00", "speed_mbps": "5000"}
+]
